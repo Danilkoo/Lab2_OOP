@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- Екран 1: Головна сторінка -->
+<div id="screen1" class="screen">
+  <h2>Головна сторінка</h2>
+  <button onclick="navigateTo('screen2')">Перейти на екран 2</button>
+  <button onclick="navigateTo('screen3')">Перейти на екран 3</button>
+  <button onclick="navigateTo('screen4')">Перейти на екран 4</button>
+</div>
+
+<!-- Екран 2: Форма -->
+<div id="screen2" class="screen hidden">
+  <h2>Форма реєстрації</h2>
+  <form id="registrationForm">
+    <label for="name">Ім'я:</label>
+    <input type="text" id="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+
+    <label for="age">Вік:</label>
+    <input type="number" id="age">
+
+    <button type="button" onclick="submitForm()">Зареєструватися</button>
+  </form>
+  <button onclick="navigateTo('screen1')">Назад</button>
+</div>
+
+<!-- Екран 3: Таблиця -->
+<div id="screen3" class="screen hidden">
+  <h2>Таблиця даних</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Ім'я</th>
+      <th>Email</th>
+      <th>Вік</th>
+    </tr>
+    </thead>
+    <tbody id="tableBody">
+    <!-- Дані будуть додані JavaScript'ом -->
+    </tbody>
+  </table>
+  <button onclick="navigateTo('screen1')">Назад</button>
+</div>
+
+<!-- Екран 4: Список -->
+<div id="screen4" class="screen hidden">
+  <h2>Список завдань</h2>
+  <input type="text" id="taskInput" placeholder="Нове завдання">
+  <button onclick="addTask()">Додати завдання</button>
+  <ul id="taskList">
+    <!-- Завдання будуть додані JavaScript'ом -->
+  </ul>
+  <button onclick="navigateTo('screen1')">Назад</button>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>
